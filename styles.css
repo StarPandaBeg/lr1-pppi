@@ -1,0 +1,158 @@
+:root {
+  --bg: #f6f7fb;
+  --bg-alt: #eef1f7;
+  --text: #1f2430;
+  --muted: #5a6475;
+  --accent: #2c6bed;
+  --border: #d8dee9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.container {
+  width: min(1000px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 56px 0 40px;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 12px;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  color: #fff;
+  background: var(--accent);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: var(--accent);
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section.alt {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.scenario {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.scenario code {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: var(--bg-alt);
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+.site-footer {
+  padding: 20px 0 30px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
