@@ -1,15 +1,34 @@
-"""UI panels for the 3D editor (alternate stub)."""
+"""UI panels for the 3D editor (stub implementation)."""
+
+from dataclasses import dataclass
+
+
+@dataclass
+class PanelState:
+    title: str
+    visible: bool = True
+
 
 class Panel:
-    def __init__(self, title: str, visible: bool = True) -> None:
-        self.title = title
-        self.visible = visible
+    def __init__(self, title: str) -> None:
+        self.state = PanelState(title=title)
 
-    def show(self) -> None:
-        self.visible = True
-
-    def hide(self) -> None:
-        self.visible = False
+    def toggle(self) -> None:
+        self.state.visible = not self.state.visible
 
     def render(self) -> str:
-        return f"{self.title}: {'on' if self.visible else 'off'}"
+        status = "visible" if self.state.visible else "hidden"
+        return f"[{self.state.title}] {status}"
+
+
+class Toolbar(Panel):
+    def __init__(self) -> None:
+        super().__init__("Toolbar")
+        self.tools = []
+
+    def add_tool(self, name: str) -> None:
+        self.tools.append(name)
+
+    def render(self) -> str:
+        base = super().render()
+        return f"{base} | tools={', '.join(self.tools) or 'none'}"
