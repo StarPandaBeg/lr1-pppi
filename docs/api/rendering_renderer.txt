@@ -1,0 +1,70 @@
+Help on module src.rendering.renderer in src.rendering:
+
+NAME
+    src.rendering.renderer - Rendering module.
+
+CLASSES
+    builtins.object
+        RenderSettings
+
+    class RenderSettings(builtins.object)
+     |  RenderSettings(width: int = 800, height: int = 600, samples: int = 32) -> None
+     |
+     |  Rendering settings descriptor.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, width: int = 800, height: int = 600, samples: int = 32) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'height': <class 'int'>, 'samples': <class 'int'>, ...
+     |
+     |  __dataclass_fields__ = {'height': Field(name='height',type=<class 'int...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('width', 'height', 'samples')
+     |
+     |  height = 600
+     |
+     |  samples = 32
+     |
+     |  width = 800
+
+FUNCTIONS
+    render_scene(scene_name: str, settings: src.rendering.renderer.RenderSettings) -> str
+        Render a scene to an image.
+
+        Args:
+            scene_name: Name of the scene to render.
+            settings: Rendering settings.
+
+        Returns:
+            Output image path.
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/rendering/renderer.py
+
+

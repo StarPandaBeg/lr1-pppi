@@ -1,0 +1,111 @@
+Help on module src.scene.transform in src.scene:
+
+NAME
+    src.scene.transform - Spatial transform module.
+
+CLASSES
+    builtins.object
+        Transform
+        Vec3
+
+    class Transform(builtins.object)
+     |  Transform(
+     |      position: src.scene.transform.Vec3 = <factory>,
+     |      rotation: src.scene.transform.Vec3 = <factory>,
+     |      scale: src.scene.transform.Vec3 = <factory>
+     |  ) -> None
+     |
+     |  Position, rotation, and scale of an object.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(
+     |      self,
+     |      position: src.scene.transform.Vec3 = <factory>,
+     |      rotation: src.scene.transform.Vec3 = <factory>,
+     |      scale: src.scene.transform.Vec3 = <factory>
+     |  ) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  translate(self, dx: float, dy: float, dz: float) -> None
+     |      Apply translation to the position.
+     |
+     |      Args:
+     |          dx: Delta along X.
+     |          dy: Delta along Y.
+     |          dz: Delta along Z.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'position': <class 'src.scene.transform.Vec3'>, 'ro...
+     |
+     |  __dataclass_fields__ = {'position': Field(name='position',type=<class ...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('position', 'rotation', 'scale')
+
+    class Vec3(builtins.object)
+     |  Vec3(x: float, y: float, z: float) -> None
+     |
+     |  3D vector value object.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, x: float, y: float, z: float) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'x': <class 'float'>, 'y': <class 'float'>, 'z': <c...
+     |
+     |  __dataclass_fields__ = {'x': Field(name='x',type=<class 'float'>,defau...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('x', 'y', 'z')
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/scene/transform.py
+
+

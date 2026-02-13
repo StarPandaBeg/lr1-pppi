@@ -1,0 +1,81 @@
+Help on module src.materials.materials in src.materials:
+
+NAME
+    src.materials.materials - Materials and texturing module.
+
+CLASSES
+    builtins.object
+        Material
+
+    class Material(builtins.object)
+     |  Material(
+     |      name: str,
+     |      color: str = 'white',
+     |      roughness: float = 0.5,
+     |      metallic: float = 0.0
+     |  ) -> None
+     |
+     |  Surface material with basic properties.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(
+     |      self,
+     |      name: str,
+     |      color: str = 'white',
+     |      roughness: float = 0.5,
+     |      metallic: float = 0.0
+     |  ) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'color': <class 'str'>, 'metallic': <class 'float'>...
+     |
+     |  __dataclass_fields__ = {'color': Field(name='color',type=<class 'str'>...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'color', 'roughness', 'metallic')
+     |
+     |  color = 'white'
+     |
+     |  metallic = 0.0
+     |
+     |  roughness = 0.5
+
+FUNCTIONS
+    assign_material(object_name: str, material: src.materials.materials.Material) -> str
+        Assign a material to an object.
+
+        Args:
+            object_name: Target object name.
+            material: Material to assign.
+
+        Returns:
+            Status message.
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/materials/materials.py
+
+

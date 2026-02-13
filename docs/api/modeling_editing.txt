@@ -1,0 +1,74 @@
+Help on module src.modeling.editing in src.modeling:
+
+NAME
+    src.modeling.editing - Polygon editing module.
+
+CLASSES
+    builtins.object
+        Selection
+
+    class Selection(builtins.object)
+     |  Selection(vertices: int, edges: int, faces: int) -> None
+     |
+     |  Selection descriptor for polygon editing.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, vertices: int, edges: int, faces: int) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'edges': <class 'int'>, 'faces': <class 'int'>, 've...
+     |
+     |  __dataclass_fields__ = {'edges': Field(name='edges',type=<class 'int'>...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('vertices', 'edges', 'faces')
+
+FUNCTIONS
+    bevel(selection: src.modeling.editing.Selection, segments: int) -> src.modeling.editing.Selection
+        Bevel selected elements.
+
+        Args:
+            selection: Current selection.
+            segments: Number of bevel segments.
+
+        Returns:
+            Updated selection after bevel.
+
+    extrude(selection: src.modeling.editing.Selection, distance: float) -> src.modeling.editing.Selection
+        Extrude selected faces.
+
+        Args:
+            selection: Current selection.
+            distance: Extrusion distance.
+
+        Returns:
+            Updated selection after extrusion.
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/modeling/editing.py
+
+

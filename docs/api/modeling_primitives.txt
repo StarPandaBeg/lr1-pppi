@@ -1,0 +1,73 @@
+Help on module src.modeling.primitives in src.modeling:
+
+NAME
+    src.modeling.primitives - Geometric primitives module.
+
+CLASSES
+    builtins.object
+        Mesh
+
+    class Mesh(builtins.object)
+     |  Mesh(name: str, vertex_count: int) -> None
+     |
+     |  Lightweight mesh descriptor.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, name: str, vertex_count: int) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'name': <class 'str'>, 'vertex_count': <class 'int'...
+     |
+     |  __dataclass_fields__ = {'name': Field(name='name',type=<class 'str'>,d...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'vertex_count')
+
+FUNCTIONS
+    create_cube(size: float) -> src.modeling.primitives.Mesh
+        Create a cube primitive.
+
+        Args:
+            size: Edge length.
+
+        Returns:
+            New mesh instance.
+
+    create_sphere(radius: float, segments: int) -> src.modeling.primitives.Mesh
+        Create a sphere primitive.
+
+        Args:
+            radius: Sphere radius.
+            segments: Number of segments.
+
+        Returns:
+            New mesh instance.
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/modeling/primitives.py
+
+

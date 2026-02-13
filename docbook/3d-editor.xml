@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article>
+  <articleinfo>
+    <title>3D-редактор: краткое описание</title>
+    <author>
+      <firstname>Студент</firstname>
+      <surname>Иванов</surname>
+    </author>
+  </articleinfo>
+
+  <section>
+    <title>Описание продукта</title>
+    <para>3D-редактор предназначен для создания и правки трёхмерных сцен с упором на базовые инструменты моделирования и визуализации. Приложение ориентировано на учебные и демонстрационные задачи, поэтому архитектура модульная и легко расширяется.</para>
+    <para>Система предоставляет пользователю рабочую область, панель инструментов и диспетчер объектов, чтобы управлять сценой и свойствами элементов. В качестве минимального набора реализуются операции создания примитивов, трансформаций, редактирования полигонов и применения модификаторов.</para>
+    <para>Сцена хранит иерархию объектов, включая источники света и камеры. Это позволяет пользователю управлять структурой сцены, настраивать освещение и выбирать точку наблюдения при визуализации.</para>
+    <para>Материалы и текстурирование реализованы отдельным модулем, чтобы отделить описание поверхности от геометрии. Визуализация использует параметры камеры и освещения для формирования итогового изображения.</para>
+    <para>Импорт и экспорт поддерживают обмен данными с внешними форматами, а модуль управления проектом отвечает за создание, сохранение и состояние проекта. Такой набор компонентов обеспечивает целостный рабочий цикл от моделирования до сохранения результата.</para>
+  </section>
+
+  <section>
+    <title>Модули проекта</title>
+    <itemizedlist>
+      <listitem><para>Модуль пользовательского интерфейса</para></listitem>
+      <listitem><para>Модуль управления сценой</para></listitem>
+      <listitem><para>Модуль геометрических примитивов</para></listitem>
+      <listitem><para>Модуль пространственных преобразований</para></listitem>
+      <listitem><para>Модуль редактирования полигональной модели</para></listitem>
+      <listitem><para>Модуль модификаторов</para></listitem>
+      <listitem><para>Модуль материалов и текстурирования</para></listitem>
+      <listitem><para>Модуль освещения</para></listitem>
+      <listitem><para>Модуль камер</para></listitem>
+      <listitem><para>Модуль визуализации</para></listitem>
+      <listitem><para>Модуль импорта и экспорта</para></listitem>
+      <listitem><para>Модуль управления проектом</para></listitem>
+    </itemizedlist>
+  </section>
+
+  <section>
+    <title>Сценарии использования</title>
+
+    <section>
+      <title>Сценарий 1: Создание сцены и камеры</title>
+      <para>Пользователь создаёт сцену, добавляет объект и настраивает камеру для просмотра.</para>
+      <programlisting language="python">
+from src.scene.scene_graph import Scene, SceneNode
+from src.scene.camera import Camera
+
+scene = Scene()
+scene.add_object(SceneNode("Cube"))
+cam = Camera("MainCam")
+cam.set_fov(50.0)
+      </programlisting>
+    </section>
+
+    <section>
+      <title>Сценарий 2: Моделирование и модификаторы</title>
+      <para>Создаётся примитив, после чего к нему применяется модификатор массива.</para>
+      <programlisting language="python">
+from src.modeling.primitives import create_cube
+from src.modeling.modifiers import Array
+
+mesh = create_cube(1.0)
+mod = Array(3)
+      </programlisting>
+    </section>
+
+    <section>
+      <title>Сценарий 3: Материалы, свет и рендер</title>
+      <para>Материал назначается объекту, свет настраивается, сцена отправляется в рендер.</para>
+      <programlisting language="python">
+from src.materials.materials import Material, assign_material
+from src.lighting.lights import Light, set_intensity
+from src.rendering.renderer import RenderSettings, render_scene
+
+mat = Material(name="Plastic", color="red")
+assign_material("Cube", mat)
+light = Light(name="Key")
+set_intensity(light, 2.0)
+path = render_scene("Demo", RenderSettings(width=1280, height=720))
+      </programlisting>
+    </section>
+  </section>
+</article>

@@ -1,0 +1,73 @@
+Help on module src.scene.camera in src.scene:
+
+NAME
+    src.scene.camera - Camera module.
+
+CLASSES
+    builtins.object
+        Camera
+
+    class Camera(builtins.object)
+     |  Camera(
+     |      name: str,
+     |      fov_degrees: float = 60.0,
+     |      transform: src.scene.transform.Transform = <factory>
+     |  ) -> None
+     |
+     |  Scene camera with field of view and transform.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(
+     |      self,
+     |      name: str,
+     |      fov_degrees: float = 60.0,
+     |      transform: src.scene.transform.Transform = <factory>
+     |  ) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  set_fov(self, value: float) -> None
+     |      Update field of view.
+     |
+     |      Args:
+     |          value: New FOV in degrees.
+     |
+     |      Raises:
+     |          ValueError: If value is not positive.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'fov_degrees': <class 'float'>, 'name': <class 'str...
+     |
+     |  __dataclass_fields__ = {'fov_degrees': Field(name='fov_degrees',type=<...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'fov_degrees', 'transform')
+     |
+     |  fov_degrees = 60.0
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/scene/camera.py
+
+

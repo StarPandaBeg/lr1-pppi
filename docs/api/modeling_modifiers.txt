@@ -1,0 +1,169 @@
+Help on module src.modeling.modifiers in src.modeling:
+
+NAME
+    src.modeling.modifiers - Procedural modifiers module.
+
+CLASSES
+    builtins.object
+        Modifier
+            Array
+            Mirror
+
+    class Array(Modifier)
+     |  Array(count: int) -> None
+     |
+     |  Array modifier duplicating the object.
+     |
+     |  Method resolution order:
+     |      Array
+     |      Modifier
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self, count: int) -> None
+     |      Create array modifier.
+     |
+     |      Args:
+     |          count: Number of duplicates.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {}
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Modifier:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Modifier:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from Modifier:
+     |
+     |  __dataclass_fields__ = {'enabled': Field(name='enabled',type=<class 'b...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'enabled')
+     |
+     |  enabled = True
+
+    class Mirror(Modifier)
+     |  Mirror(axis: str = 'X') -> None
+     |
+     |  Mirror modifier across a given axis.
+     |
+     |  Method resolution order:
+     |      Mirror
+     |      Modifier
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self, axis: str = 'X') -> None
+     |      Create mirror modifier.
+     |
+     |      Args:
+     |          axis: Axis name (X, Y, Z).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {}
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Modifier:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Modifier:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from Modifier:
+     |
+     |  __dataclass_fields__ = {'enabled': Field(name='enabled',type=<class 'b...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'enabled')
+     |
+     |  enabled = True
+
+    class Modifier(builtins.object)
+     |  Modifier(name: str, enabled: bool = True) -> None
+     |
+     |  Base modifier descriptor.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, name: str, enabled: bool = True) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'enabled': <class 'bool'>, 'name': <class 'str'>}
+     |
+     |  __dataclass_fields__ = {'enabled': Field(name='enabled',type=<class 'b...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'enabled')
+     |
+     |  enabled = True
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/modeling/modifiers.py
+
+

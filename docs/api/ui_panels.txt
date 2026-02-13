@@ -1,0 +1,124 @@
+Help on module src.ui.panels in src.ui:
+
+NAME
+    src.ui.panels - UI panels for the 3D editor.
+
+CLASSES
+    builtins.object
+        Panel
+            Toolbar
+        PanelState
+
+    class Panel(builtins.object)
+     |  Panel(title: str) -> None
+     |
+     |  Base panel widget.
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self, title: str) -> None
+     |      Create a panel instance.
+     |
+     |      Args:
+     |          title: Panel title shown in the UI.
+     |
+     |  render(self) -> str
+     |      Return a textual representation of the panel.
+     |
+     |  toggle(self) -> None
+     |      Toggle panel visibility.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+
+    class PanelState(builtins.object)
+     |  PanelState(title: str, visible: bool = True) -> None
+     |
+     |  Persistent state for a UI panel.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, title: str, visible: bool = True) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'title': <class 'str'>, 'visible': <class 'bool'>}
+     |
+     |  __dataclass_fields__ = {'title': Field(name='title',type=<class 'str'>...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('title', 'visible')
+     |
+     |  visible = True
+
+    class Toolbar(Panel)
+     |  Toolbar() -> None
+     |
+     |  Toolbar widget with a list of tools.
+     |
+     |  Method resolution order:
+     |      Toolbar
+     |      Panel
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self) -> None
+     |      Initialize toolbar with a default title.
+     |
+     |  add_tool(self, name: str) -> None
+     |      Register a new tool.
+     |
+     |      Args:
+     |          name: Tool label.
+     |
+     |  render(self) -> str
+     |      Return a textual representation of the toolbar.
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Panel:
+     |
+     |  toggle(self) -> None
+     |      Toggle panel visibility.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Panel:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/ui/panels.py
+
+

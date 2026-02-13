@@ -1,0 +1,101 @@
+Help on module src.project.project_manager in src.project:
+
+NAME
+    src.project.project_manager - Project management module.
+
+CLASSES
+    builtins.object
+        ProjectInfo
+        ProjectManager
+
+    class ProjectInfo(builtins.object)
+     |  ProjectInfo(name: str, path: pathlib._local.Path, is_dirty: bool = False) -> None
+     |
+     |  Immutable project metadata.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, other)
+     |      Return self==value.
+     |
+     |  __init__(self, name: str, path: pathlib._local.Path, is_dirty: bool = False) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  __replace__ = _replace(self, /, **changes) from dataclasses
+     |
+     |  __repr__(self)
+     |      Return repr(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  __annotations__ = {'is_dirty': <class 'bool'>, 'name': <class 'str'>, ...
+     |
+     |  __dataclass_fields__ = {'is_dirty': Field(name='is_dirty',type=<class ...
+     |
+     |  __dataclass_params__ = _DataclassParams(init=True,repr=True,eq=True,or...
+     |
+     |  __hash__ = None
+     |
+     |  __match_args__ = ('name', 'path', 'is_dirty')
+     |
+     |  is_dirty = False
+
+    class ProjectManager(builtins.object)
+     |  ProjectManager() -> None
+     |
+     |  Service for creating and tracking projects.
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self) -> None
+     |      Initialize manager without an active project.
+     |
+     |  mark_dirty(self, dirty: bool = True) -> None
+     |      Mark the active project as modified.
+     |
+     |      Args:
+     |          dirty: New dirty flag value.
+     |
+     |  new(self, name: str, path: pathlib._local.Path) -> src.project.project_manager.ProjectInfo
+     |      Create a new project and set it as active.
+     |
+     |      Args:
+     |          name: Project name.
+     |          path: Filesystem location.
+     |
+     |      Returns:
+     |          Project info object.
+     |
+     |  status_line(self) -> str
+     |      Build a status line for UI display.
+     |
+     |      Returns:
+     |          Text with current project and dirty marker.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables
+     |
+     |  __weakref__
+     |      list of weak references to the object
+
+DATA
+    Optional = typing.Optional
+        Optional[X] is equivalent to Union[X, None].
+
+FILE
+    /Users/stpnd/Documents/Workspace/lr1-pppi/src/project/project_manager.py
+
+
